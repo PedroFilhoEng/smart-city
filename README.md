@@ -1,5 +1,5 @@
 
-# Single Shot MultiBox Detector Implementation in Pytorch
+# Tutorial - Teste de Vídeo com YoloV5
 
 This repo implements [SSD (Single Shot MultiBox Detector)](https://arxiv.org/abs/1512.02325). The implementation is heavily influenced by the projects [ssd.pytorch](https://github.com/amdegroot/ssd.pytorch) and [Detectron](https://github.com/facebookresearch/Detectron).
 The design goal is modularity and extensibility.
