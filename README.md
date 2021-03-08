@@ -1,7 +1,7 @@
 # smart-city-canaa
 TESTE
-My Trash Dataset
-images images
+
+![FOTO](https://user-images.githubusercontent.com/35050296/110274925-c02ace80-7fae-11eb-97af-d623377b62bc.png)
 
 Label format : Ezlabel - Creda
 data1 : https://drive.google.com/file/d/1wfMGTAlCebLDY-25SbLwnERzWzVoI7IH/view?usp=sharing
