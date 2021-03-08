@@ -10,7 +10,8 @@ It also has out-of-box support for retraining on Google Open Images dataset.
 
 ![image](https://user-images.githubusercontent.com/35050296/110277663-7b099b00-7fb4-11eb-8b7c-920b35515d58.png)
 
-https://github.com/PedroFilhoEng/smart-city-canaa/blob/main/Fazenda_YOLOV5.gif?raw=true
+![gif](https://github.com/PedroFilhoEng/smart-city-canaa/blob/a12c3ce0f307e35bd8feabf0fbddbcf2db9461be/Fazenda_YOLOV5.gif)
+
 
 
 ## Dependencies
