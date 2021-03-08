@@ -8,7 +8,7 @@ Currently, it has MobileNetV1, MobileNetV2, and VGG based SSD/SSD-Lite implement
 
 It also has out-of-box support for retraining on Google Open Images dataset.
 
-![image](https://user-images.githubusercontent.com/35050296/110277663-7b099b00-7fb4-11eb-8b7c-920b35515d58.png)
+
 
 ![gif](https://github.com/PedroFilhoEng/smart-city-canaa/blob/a12c3ce0f307e35bd8feabf0fbddbcf2db9461be/Fazenda_YOLOV5.gif)
 
@@ -195,7 +195,7 @@ wget -P models https://storage.googleapis.com/models-hao/open-images-model-label
 python run_ssd_example.py mb1-ssd models/gun_model_2.21.pth models/open-images-model-labels.txt ~/Downloads/big.JPG
 ```
 
-![Example of Gun Detection](gun.jpg)
+![image](https://user-images.githubusercontent.com/35050296/110277663-7b099b00-7fb4-11eb-8b7c-920b35515d58.png)
 
 
 If you manage to get more annotated data, the accuracy could become much higher.
