@@ -7,7 +7,8 @@ Currently, it has MobileNetV1, MobileNetV2, and VGG based SSD/SSD-Lite implement
 
 It also has out-of-box support for retraining on Google Open Images dataset.
 
-https://github.com/PedroFilhoEng/smart-city-canaa/blob/352947b128dc267296d268d4ca88f3c095f646eb/FOTO.png
+![image](https://user-images.githubusercontent.com/35050296/110277663-7b099b00-7fb4-11eb-8b7c-920b35515d58.png)
+
 
 ## Dependencies
 1. Python 3.6+
