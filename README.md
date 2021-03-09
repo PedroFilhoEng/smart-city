@@ -2,7 +2,6 @@
 
 Este repositório representa a pesquisa de detecção de objetos aplicada ao problema de identificação de potenciais focos de reprodução de mosquitos do gênero Aedes, cujo o objetivo é delimitar e classificar as possíveis regiões de interesse em imagens ou vídeos. A rede neural utilizada como base para a transferência de aprendizado foi a [YOLOV5](https://pytorch.org/hub/ultralytics_yolov5/), que utiliza o [framework Pytorch](pytorch.org).
 
-O [conjunto de dados (DATASET)](https://app.roboflow.com/dataset/duas_classes) utilizado no treinamento da rede, foi anotado manualmente e possui duas classes: **Água** e **Lixo**. 
 
 
 ![gif](https://github.com/PedroFilhoEng/smart-city-canaa/blob/a12c3ce0f307e35bd8feabf0fbddbcf2db9461be/Fazenda_YOLOV5.gif)
