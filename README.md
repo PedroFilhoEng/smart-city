@@ -15,7 +15,7 @@ O [conjunto de dados (DATASET)](https://app.roboflow.com/dataset/duas_classes) u
 - **Anotações**: 1567;
 - **Balanço de Classe**: Água:937 | Lixo: 630.
  
-
+<img src="https://github.com/PedroFilhoEng/smart-city-canaa/blob/7f588b73b190ae22ae2ede5b7783a5062f3a3afa/test_batch2_pred.jpg" width="900">
 
 ** GPU Speed measures end-to-end time per image averaged over 5000 COCO val2017 images using a V100 GPU with batch size 32, and includes image preprocessing, PyTorch FP16 inference, postprocessing and NMS. EfficientDet data from [google/automl](https://github.com/google/automl) at batch size 8.
 
