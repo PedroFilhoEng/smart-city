@@ -55,7 +55,7 @@ Python 3.8 ou superior com todas as dependências de [requirements.txt](https://
 ```bash
 $ pip install -r requirements.txt
 ```
-
+<!--
 ## Tutorials
 
 * [Train Custom Data](https://github.com/ultralytics/yolov5/wiki/Train-Custom-Data)&nbsp; 🚀 RECOMMENDED
@@ -69,7 +69,7 @@ $ pip install -r requirements.txt
 * [Hyperparameter Evolution](https://github.com/ultralytics/yolov5/issues/607)
 * [Transfer Learning with Frozen Layers](https://github.com/ultralytics/yolov5/issues/1314)&nbsp; ⭐ NEW
 * [TensorRT Deployment](https://github.com/wang-xinyu/tensorrtx)
-
+-->
 
 ## Ambiente
 
