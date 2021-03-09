@@ -1,11 +1,6 @@
 # Tutorial - Teste de Vídeo com YoloV5
 ![gif](https://github.com/PedroFilhoEng/smart-city-canaa/blob/a12c3ce0f307e35bd8feabf0fbddbcf2db9461be/Fazenda_YOLOV5.gif)
 
-
-<img src="https://user-images.githubusercontent.com/35050296/110277663-7b099b00-7fb4-11eb-8b7c-920b35515d58.png" width="1000">
-
-
-
 Este repositório representa a pesquisa de código aberto da Ultralytics em métodos de detecção de objetos futuros e incorpora nossas lições aprendidas e melhores práticas desenvolvidas ao longo do treinamento de milhares de modelos em conjuntos de dados de clientes personalizados com nosso repositório YOLO anterior https://github.com/ultralytics/yolov3. ** Todos os códigos e modelos estão em desenvolvimento ativo e estão sujeitos a modificação ou exclusão sem aviso prévio. ** Use por sua própria conta e risco.
 
 <img src="https://user-images.githubusercontent.com/26833433/90187293-6773ba00-dd6e-11ea-8f90-cd94afc0427f.png" width="1000">** GPU Speed measures end-to-end time per image averaged over 5000 COCO val2017 images using a V100 GPU with batch size 32, and includes image preprocessing, PyTorch FP16 inference, postprocessing and NMS. EfficientDet data from [google/automl](https://github.com/google/automl) at batch size 8.
@@ -19,7 +14,7 @@ Este repositório representa a pesquisa de código aberto da Ultralytics em mét
 
 ![gif](https://github.com/PedroFilhoEng/smart-city-canaa/blob/a12c3ce0f307e35bd8feabf0fbddbcf2db9461be/Fazenda_YOLOV5.gif)
 ## Pretrained Checkpoints
-
+<img src="https://user-images.githubusercontent.com/35050296/110277663-7b099b00-7fb4-11eb-8b7c-920b35515d58.png" width="1000">
 | Model | AP<sup>val</sup> | AP<sup>test</sup> | AP<sub>50</sub> | Speed<sub>GPU</sub> | FPS<sub>GPU</sub> || params | FLOPS |
 |---------- |------ |------ |------ | -------- | ------| ------ |------  |  :------: |
 | [YOLOv5s](https://github.com/ultralytics/yolov5/releases)    | 37.0     | 37.0     | 56.2     | **2.4ms** | **416** || 7.5M   | 13.2B
