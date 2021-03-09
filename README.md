@@ -34,11 +34,11 @@ Este repositório representa a pesquisa de código aberto da Ultralytics em mét
 ![image](https://user-images.githubusercontent.com/35050296/110505082-97085c00-80dc-11eb-8174-7b45270e4a28.png)
 ## Requirements
 
-Python 3.8 or later with all [requirements.txt](https://github.com/ultralytics/yolov5/blob/master/requirements.txt) dependencies installed, including `torch>=1.7`. To install run:
+Python 3.8 ou superior com todas as dependências [requirements.txt](https://github.com/ultralytics/yolov5/blob/master/requirements.txt) instaladas, incluindo `torch>=1.7`. Para instalar, execute:
 ```bash
 $ pip install -r requirements.txt
 ```
-
+Python 3.8 ou posterior com todas as dependências de requirements.txt instaladas, incluindo tocha> = 1.7. Para instalar, execute:
 
 ## Tutorials
 
