@@ -12,9 +12,9 @@ Este repositório representa a pesquisa de código aberto da Ultralytics em mét
 - **June 9, 2020**: [CSP](https://github.com/WongKinYiu/CrossStagePartialNetworks) updates: improved speed, size, and accuracy (credit to @WongKinYiu for CSP).
 - **May 27, 2020**: Public release. YOLOv5 models are SOTA among all known YOLO implementations.
 
-![gif](https://github.com/PedroFilhoEng/smart-city-canaa/blob/a12c3ce0f307e35bd8feabf0fbddbcf2db9461be/Fazenda_YOLOV5.gif)
-## Pretrained Checkpoints
-<img src="https://user-images.githubusercontent.com/35050296/110277663-7b099b00-7fb4-11eb-8b7c-920b35515d58.png" width="1000">
+
+## Pretrained Checkpoints Pré-Treinados
+
 | Model | AP<sup>val</sup> | AP<sup>test</sup> | AP<sub>50</sub> | Speed<sub>GPU</sub> | FPS<sub>GPU</sub> || params | FLOPS |
 |---------- |------ |------ |------ | -------- | ------| ------ |------  |  :------: |
 | [YOLOv5s](https://github.com/ultralytics/yolov5/releases)    | 37.0     | 37.0     | 56.2     | **2.4ms** | **416** || 7.5M   | 13.2B
