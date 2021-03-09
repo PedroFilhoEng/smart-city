@@ -1,5 +1,5 @@
 # Tutorial - Teste de Vídeo com YoloV5
-<img scr="https://github.com/PedroFilhoEng/smart-city-canaa/blob/ea1718b5add6b0888c918d73c8b8af7f6d8aa777/logo.png" width="1000">
+![img](https://github.com/PedroFilhoEng/smart-city-canaa/blob/ea1718b5add6b0888c918d73c8b8af7f6d8aa777/logo.png)
 
 
 Este repositório representa a pesquisa de código aberto da Ultralytics em métodos de detecção de objetos futuros e incorpora nossas lições aprendidas e melhores práticas desenvolvidas ao longo do treinamento de milhares de modelos em conjuntos de dados de clientes personalizados com nosso repositório YOLO anterior https://github.com/ultralytics/yolov3. ** Todos os códigos e modelos estão em desenvolvimento ativo e estão sujeitos a modificação ou exclusão sem aviso prévio. ** Use por sua própria conta e risco.
