@@ -98,23 +98,6 @@ Done. (0.113s)
 
 <!--![image](https://user-images.githubusercontent.com/35050296/110505082-97085c00-80dc-11eb-8174-7b45270e4a28.png)-->
 
-### PyTorch Hub
-Para executar a **inferência em lote**, em dois ou mais imagens, com o YOLOv5 and [PyTorch Hub](https://github.com/ultralytics/yolov5/issues/36):
-```python
-import torch
-from PIL import Image
-
-# Model
-model = torch.hub.load('ultralytics/yolov5', 'yolov5s', pretrained=True).autoshape()  # for PIL/cv2/np inputs and NMS
-
-# Images
-img1 = Image.open('zidane.jpg')
-img2 = Image.open('bus.jpg')
-imgs = [img1, img2]  # batched list of images
-
-# Inference
-prediction = model(imgs, size=640)  # includes NMS
-```
 
 
 ## Training
