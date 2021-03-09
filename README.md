@@ -10,13 +10,16 @@ Este repositório representa a pesquisa de detecção de objetos aplicada ao pro
 O [conjunto de dados (DATASET)](https://app.roboflow.com/dataset/duas_classes) utilizado no treinamento da rede, foi resultado da pesquisa de diferentes fontes de imagens e vídeos relacionados. O dataset foi anotado manualmente e possui duas classes: **Água** e **Lixo**. Para anotar os dados foi utilizada a plataforma [Roboflow](https://app.roboflow.com/). 
 ** O modelo e o dataset estão em desenvolvimento ativo e estão sujeitos a modificação. 
 
-### Verificação de integridade do conjunto de dados
+### Detalhes do Conjunto de Dados
+O dataset totaliza 1028 imagens e 1567 anotações, dívididas em 937 anotações para a classe Água e 630 anotações para a classe Lixo.
+#### Resumo:
 - **Imagens**: 1028;
 - **Anotações**: 1567;
 - **Balanço de Classe**: Água:937 | Lixo: 630.
  
 <img src="https://github.com/PedroFilhoEng/smart-city-canaa/blob/7f588b73b190ae22ae2ede5b7783a5062f3a3afa/test_batch2_pred.jpg" width="900">
 
+<!--
 ** GPU Speed measures end-to-end time per image averaged over 5000 COCO val2017 images using a V100 GPU with batch size 32, and includes image preprocessing, PyTorch FP16 inference, postprocessing and NMS. EfficientDet data from [google/automl](https://github.com/google/automl) at batch size 8.
 
 - **August 13, 2020**: [v3.0 release](https://github.com/ultralytics/yolov5/releases/tag/v3.0): nn.Hardswish() activations, data autodownload, native AMP.
@@ -44,7 +47,7 @@ O [conjunto de dados (DATASET)](https://app.roboflow.com/dataset/duas_classes) u
 ** All AP numbers are for single-model single-scale without ensemble or TTA. **Reproduce mAP** by `python test.py --data coco.yaml --img 640 --conf 0.001 --iou 0.65`  
 ** Speed<sub>GPU</sub> averaged over 5000 COCO val2017 images using a GCP [n1-standard-16](https://cloud.google.com/compute/docs/machine-types#n1_standard_machine_types) V100 instance, and includes image preprocessing, FP16 inference, postprocessing and NMS. NMS is 1-2ms/img.  **Reproduce speed** by `python test.py --data coco.yaml --img 640 --conf 0.25 --iou 0.45`  
 ** All checkpoints are trained to 300 epochs with default settings and hyperparameters (no autoaugmentation). 
-** Test Time Augmentation ([TTA](https://github.com/ultralytics/yolov5/issues/303)) runs at 3 image sizes. **Reproduce TTA** by `python test.py --data coco.yaml --img 832 --iou 0.65 --augment` 
+** Test Time Augmentation ([TTA](https://github.com/ultralytics/yolov5/issues/303)) runs at 3 image sizes. **Reproduce TTA** by `python test.py --data coco.yaml --img 832 --iou 0.65 --augment` -->
 
 ## Requisitos
 
