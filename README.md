@@ -1,9 +1,9 @@
 # Tutorial - Teste de Vídeo com YoloV5
 ![gif](https://github.com/PedroFilhoEng/smart-city-canaa/blob/a12c3ce0f307e35bd8feabf0fbddbcf2db9461be/Fazenda_YOLOV5.gif)
 
-<img src="https://github.com/PedroFilhoEng/smart-city-canaa/blob/a12c3ce0f307e35bd8feabf0fbddbcf2db9461be/Fazenda_YOLOV5.gif alt="this slowpoke moves"  width=1000/>
+<img src="https://github.com/PedroFilhoEng/smart-city-canaa/blob/a12c3ce0f307e35bd8feabf0fbddbcf2db9461be/Fazenda_YOLOV5.gif alt="this slowpoke moves"  width="1000">
 
-<img src="https://user-images.githubusercontent.com/35050296/110277663-7b099b00-7fb4-11eb-8b7c-920b35515d58.png" width="1000"></a>
+<img src="https://user-images.githubusercontent.com/35050296/110277663-7b099b00-7fb4-11eb-8b7c-920b35515d58.png" width="1000">
 
 
 
