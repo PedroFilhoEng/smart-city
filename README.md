@@ -434,10 +434,4 @@ python eval_ssd.py --net vgg16-ssd  --dataset ~/data/VOC0712/test/VOC2007/ --tra
 1. Resnet34 Based Model.
 2. BatchNorm Fusion.
 -->
-"iframe": {
-  "props": {
-    "src": "https://youtu.be/wndcxeAzMuI",
-    "width": 100,
-    "heigth": 200,
-  }
-}
+
