@@ -95,7 +95,7 @@ $ python detect.py --source 0  # webcam
                             http://112.50.243.8/PLTV/88888888/224/3221225900/1.m3u8  # http stream
 ```
 
-To run inference on example images in `data/images`:
+Para executar inferência em imagens de exemplo em `data/images`:
 ```bash
 $ python detect.py --source data/images --weights yolov5s.pt --conf 0.25
 
