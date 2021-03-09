@@ -6,7 +6,7 @@ Este repositório representa a pesquisa de detecção de objetos aplicada ao pro
 
 ![gif](https://github.com/PedroFilhoEng/smart-city-canaa/blob/a12c3ce0f307e35bd8feabf0fbddbcf2db9461be/Fazenda_YOLOV5.gif)
 
-# Conjunto de Treinamento
+# Conjunto de Treinamento - Dataset
 O [conjunto de dados (DATASET)](https://app.roboflow.com/dataset/duas_classes) utilizado no treinamento da rede, foi anotado manualmente e possui duas classes: **Água** e **Lixo**. Para anotar os dados foi utilizada a plataforma [Roboflow](https://app.roboflow.com/), onde encontram-se hospedado o dataset. 
 ** O modelo e o dataset estão em desenvolvimento ativo e estão sujeitos a modificação. 
 
