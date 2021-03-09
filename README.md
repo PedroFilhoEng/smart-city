@@ -149,7 +149,7 @@ For business inquiries and professional support requests please visit us at http
 
 **Issues should be raised directly in the repository.** For business inquiries or professional support requests please visit https://www.ultralytics.com or email Glenn Jocher at glenn.jocher@ultralytics.com. 
 
-
+<!--
 # Tutorial - Teste de Vídeo com YoloV5
 
 This repo implements [SSD (Single Shot MultiBox Detector)](https://arxiv.org/abs/1512.02325). The implementation is heavily influenced by the projects [ssd.pytorch](https://github.com/amdegroot/ssd.pytorch) and [Detectron](https://github.com/facebookresearch/Detectron).
@@ -433,3 +433,4 @@ python eval_ssd.py --net vgg16-ssd  --dataset ~/data/VOC0712/test/VOC2007/ --tra
 
 1. Resnet34 Based Model.
 2. BatchNorm Fusion.
+-->
