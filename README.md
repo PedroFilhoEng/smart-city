@@ -1,12 +1,17 @@
-# DETECÇÃO DE OBJETOS UTILIZANDO YoloV5 -  
+# Detecção de Potenciais Focos de Reprodução de Mosquitos | YoloV5 - Pytorch   
 
 Este repositório representa a pesquisa de detecção de objetos aplicada ao problema de identificação de potenciais focos de reprodução de mosquitos do gênero Aedes, cujo o objetivo é delimitar e classificar as possíveis regiões de interesse em imagens ou vídeos. A rede neural utilizada como base para a transferência de aprendizado foi a [YOLOV5](https://pytorch.org/hub/ultralytics_yolov5/), que utiliza o [framework Pytorch](pytorch.org).
 
-O [conjunto de dados (DATASET)](https://app.roboflow.com/dataset/duas_classes) utilizado no treinamento da rede, foi anotado manualmente e possui duas classes: **Água** e **Lixo**.
+O [conjunto de dados (DATASET)](https://app.roboflow.com/dataset/duas_classes) utilizado no treinamento da rede, foi anotado manualmente e possui duas classes: **Água** e **Lixo**. Para anotar os dados foi utilizada a plataforma [Roboflow](https://app.roboflow.com/), onde encontram-se hospedado o dataset. 
 ** O modelo e o dataset estão em desenvolvimento ativo e estão sujeitos a modificação. 
 
 
 ![gif](https://github.com/PedroFilhoEng/smart-city-canaa/blob/a12c3ce0f307e35bd8feabf0fbddbcf2db9461be/Fazenda_YOLOV5.gif)
+
+# Conjunto de Treinamento
+O [conjunto de dados (DATASET)](https://app.roboflow.com/dataset/duas_classes) utilizado no treinamento da rede, foi anotado manualmente e possui duas classes: **Água** e **Lixo**.
+
+
 
 <img src="https://github.com/PedroFilhoEng/smart-city-canaa/blob/76c7e18c87f2e1f89f47c2daabbebcd5083963fe/results.png" width="1000">** GPU Speed measures end-to-end time per image averaged over 5000 COCO val2017 images using a V100 GPU with batch size 32, and includes image preprocessing, PyTorch FP16 inference, postprocessing and NMS. EfficientDet data from [google/automl](https://github.com/google/automl) at batch size 8.
 
