@@ -75,7 +75,7 @@ $ pip install -r requirements.txt
 
 A rede neural costomizada pode ser executado no ambiente do Google Colab (com todas as dependências, incluindo [CUDA](https://developer.nvidia.com/cuda)/[CUDNN](https://developer.nvidia.com/cudnn), [Python](https://www.python.org/) and [PyTorch](https://pytorch.org/) pré-instalados):
 
-- **Google Colab Notebook** with free GPU: <a href="https://colab.research.google.com/drive/1Y3yoY1E_IEntfHdXeX3DmU_VUgvGTETg?authuser=5"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a>
+- **Google Colab Notebook** com GPU grátis: <a href="https://colab.research.google.com/drive/1Y3yoY1E_IEntfHdXeX3DmU_VUgvGTETg?authuser=5"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a>
 <!-- - **Kaggle Notebook** with free GPU: [https://www.kaggle.com/ultralytics/yolov5](https://www.kaggle.com/ultralytics/yolov5)
 - **Google Cloud** Deep Learning VM. See [GCP Quickstart Guide](https://github.com/ultralytics/yolov5/wiki/GCP-Quickstart) 
 - **Docker Image** https://hub.docker.com/r/ultralytics/yolov5. See [Docker Quickstart Guide](https://github.com/ultralytics/yolov5/wiki/Docker-Quickstart) ![Docker Pulls](https://img.shields.io/docker/pulls/ultralytics/yolov5?logo=docker)-->
