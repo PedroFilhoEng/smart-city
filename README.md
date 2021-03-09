@@ -1,8 +1,9 @@
-# Tutorial - Teste de Vídeo com YoloV5
+# DETECÇÃO DE OBJETOS UTILIZANDO YoloV5 -  
 ![img](https://github.com/PedroFilhoEng/smart-city-canaa/blob/ea1718b5add6b0888c918d73c8b8af7f6d8aa777/logo.png)
 
 
-Este repositório representa a pesquisa de código aberto da Ultralytics em métodos de detecção de objetos futuros e incorpora nossas lições aprendidas e melhores práticas desenvolvidas ao longo do treinamento de milhares de modelos em conjuntos de dados de clientes personalizados com nosso repositório YOLO anterior https://github.com/ultralytics/yolov3. ** Todos os códigos e modelos estão em desenvolvimento ativo e estão sujeitos a modificação ou exclusão sem aviso prévio. ** Use por sua própria conta e risco.
+Este repositório representa a pesquisa de detecção de objetos aplicada ao problema de identificação de potenciais focos de reprodução de mosquitos do gênero Aedes, cujo o objetivo é delimitar e classificar as possíveis regiões de interesse em imagens ou vídeos. A rede neural utilizada como base para a transferência de aprendizado foi a [YOLOV5](https://pytorch.org/hub/ultralytics_yolov5/), que utiliza o [framework Pytorch](pytorch.org).
+futuros e incorpora nossas lições aprendidas e melhores práticas desenvolvidas ao longo do treinamento de milhares de modelos em conjuntos de dados de clientes personalizados com nosso repositório YOLO anterior https://github.com/ultralytics/yolov3. ** Todos os códigos e modelos estão em desenvolvimento ativo e estão sujeitos a modificação ou exclusão sem aviso prévio. ** Use por sua própria conta e risco.
 
 ![gif](https://github.com/PedroFilhoEng/smart-city-canaa/blob/a12c3ce0f307e35bd8feabf0fbddbcf2db9461be/Fazenda_YOLOV5.gif)
 
