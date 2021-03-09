@@ -9,6 +9,11 @@ Este repositório representa a pesquisa de detecção de objetos aplicada ao pro
 # Conjunto de Treinamento - Dataset
 O [conjunto de dados (DATASET)](https://app.roboflow.com/dataset/duas_classes) utilizado no treinamento da rede, foi resultado da pesquisa de diferentes fontes de imagens e vídeos relacionados. O dataset foi anotado manualmente e possui duas classes: **Água** e **Lixo**. Para anotar os dados foi utilizada a plataforma [Roboflow](https://app.roboflow.com/). 
 ** O modelo e o dataset estão em desenvolvimento ativo e estão sujeitos a modificação. 
+## Dataset Helt
+- **Imagens**: 1028;
+- **Anotações**: 1567;
+- **Balanço de Classe**: Água:937 | Lixo: 630.
+ 
 
 
 
