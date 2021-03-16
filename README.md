@@ -83,7 +83,7 @@ A rede neural costomizada pode ser executado no ambiente do Google Colab (com to
 
 # Inferêcias
 
-O script detect.py executa inferências em uma variedade de fontes, baixando modelos automaticamente da [versão mais recente do YOLOv5](https://github.com/ultralytics/yolov5/releases) e salvando os resultados em `runs/detect`.
+O script **detect.py** executa inferências em uma variedade de fontes, baixando modelos automaticamente da [versão mais recente do YOLOv5](https://github.com/ultralytics/yolov5/releases) e salvando os resultados em `runs/detect`.
 ```bash
 $ python detect.py --source 0  # webcam
                             file.jpg  # image 
