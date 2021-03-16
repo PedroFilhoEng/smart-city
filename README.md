@@ -111,10 +111,11 @@ image 2/2 data/images/zidane.jpg: 384x640 2 persons, 2 ties, Done. (0.012s)
 Results saved to runs/detect/exp
 Done. (0.113s)
 ```
+<img src="https://user-images.githubusercontent.com/35050296/110505082-97085c00-80dc-11eb-8174-7b45270e4a28.png" width="400">  
 ![gif](https://github.com/PedroFilhoEng/smart-city-canaa/blob/dfe41ba4e5340ac5c8aee2cf3498160a99fdc407/Animated%20GIF-downsized_large.gif)
 
 
-<img src="https://user-images.githubusercontent.com/35050296/110505082-97085c00-80dc-11eb-8174-7b45270e4a28.png" width="500">  
+
 
 <!--![image](https://user-images.githubusercontent.com/35050296/110505082-97085c00-80dc-11eb-8174-7b45270e4a28.png)-->
 
