@@ -162,7 +162,20 @@ $ python train.py --data coco.yaml --cfg yolov5s.yaml --weights '' --batch-size 
                                          yolov5l                                24
                                          yolov5x                                16
 ```
-
+Neste tutorial o comando para treino foi o seguinte:
+```bash
+$ !python train.py --data '../data.yaml' --cfg ./models/custom_yolov5s.yaml --weights ''--batch 16  --img 416  --epochs 4000  --name yolov5s_results  --cache
+```
+Argumentos:
+- **img:** define tamanho da imagem de entrada
+- **batch:** determina batch size
+- **epochs:** define o número de épocas de treinamento. (Obs: é comum que o número de epochs = 2000*número_de_classes)
+- **data:** defina o caminho para o nosso arquivo yaml
+- **cfg:** especifique a configuração do nosso modelo
+- **weights:** especificar um caminho personalizado para pesos. (Note: você pode baixar os pesos da [Pasta](https://github.com/PedroFilhoEng/canaa_dos_carajas/blob/d8c50c2810130aa0722f92791fbbba46a16f0944/runs/train/yolov5s_results/weights))
+- **name:** nome dos resultados
+- **nosave:** salva apenas na última época
+- **cache:** armazenas as imagens em cache images para deixar o treino mais rápido
 <img src="https://github.com/PedroFilhoEng/smart-city-canaa/blob/76c7e18c87f2e1f89f47c2daabbebcd5083963fe/results.png" width="900">
 
 
