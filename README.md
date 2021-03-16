@@ -95,7 +95,7 @@ $ python detect.py --source 0  # webcam
                             http://112.50.243.8/PLTV/88888888/224/3221225900/1.m3u8  # http stream
 ```
 
-Para executar inferência em imagens de exemplo em `/canaa_dos_carajas/imagens`:
+#####Para executar inferência em imagens de exemplo em `/canaa_dos_carajas/imagens`:
 ```bash
 $ !python detect.py --weights /content/canaa_dos_carajas/runs/train/yolov5s_results/weights/last.pt --img 416 --conf 0.4 --source /content/canaa_dos_carajas/imagens
 
@@ -113,7 +113,7 @@ Done. (0.912s)
 ```
 <img src="https://user-images.githubusercontent.com/35050296/110505082-97085c00-80dc-11eb-8174-7b45270e4a28.png" width="480">
 
-Para executar inferência em vídeos em `/canaa_dos_carajas`:
+#####Para executar inferência em vídeos em `/canaa_dos_carajas`:
 ```bash
 $ !python detect.py --weights /content/canaa_dos_carajas/runs/train/yolov5s_results/weights/last.pt --conf 0.4 --source video.mp4
 
