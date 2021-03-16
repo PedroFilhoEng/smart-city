@@ -111,7 +111,7 @@ image 2/2 data/images/zidane.jpg: 384x640 2 persons, 2 ties, Done. (0.012s)
 Results saved to runs/detect/exp
 Done. (0.113s)
 ```
-<iframe src="https://giphy.com/embed/xKymWWhigkguGH1TKP" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/xKymWWhigkguGH1TKP">via GIPHY</a></p>
+![gif](https://github.com/PedroFilhoEng/smart-city-canaa/blob/a12c3ce0f307e35bd8feabf0fbddbcf2db9461be/Fazenda_YOLOV5.gif)
 
 
 <img src="https://user-images.githubusercontent.com/35050296/110505082-97085c00-80dc-11eb-8174-7b45270e4a28.png" width="500">  
