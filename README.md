@@ -115,17 +115,32 @@ Done. (0.113s)
 
 Para executar inferência em vídeos:
 ```bash
-$ python detect.py --source file.mp4 --weights yolov5s.pt --conf 0.25
+$ python detect.py --source TESTE.mp4 --weights yolov5s.pt --conf 0.25
 
-Namespace(agnostic_nms=False, augment=False, classes=None, conf_thres=0.25, device='', img_size=640, iou_thres=0.45, save_conf=False, save_dir='runs/detect', save_txt=False, source='data/images/', update=False, view_img=False, weights=['yolov5s.pt'])
-Using torch 1.7.0+cu101 CUDA:0 (Tesla V100-SXM2-16GB, 16130MB)
-
-Downloading https://github.com/ultralytics/yolov5/releases/download/v3.1/yolov5s.pt to yolov5s.pt... 100%|██████████████| 14.5M/14.5M [00:00<00:00, 21.3MB/s]
+Saving TESTE.mp4 to TESTE.mp4
+User uploaded file "TESTE.mp4" with length 9710022 bytes
+     |████████████████████████████████| 645kB 4.3MB/s 
+Namespace(agnostic_nms=False, augment=False, classes=None, conf_thres=0.4, device='', exist_ok=False, img_size=640, iou_thres=0.45, name='exp', project='runs/detect', save_conf=False, save_txt=False, source='video.mp4', update=False, view_img=False, weights=['/content/canaa_dos_carajas/runs/train/yolov5s_results/weights/last.pt'])
+YOLOv5 🚀 d8c50c2 torch 1.8.0+cu101 CPU
 
 Fusing layers... 
-Model Summary: 232 layers, 7459581 parameters, 0 gradients
-image 1/2 data/images/bus.jpg: 640x480 4 persons, 1 buss, 1 skateboards, Done. (0.012s)
-image 2/2 data/images/zidane.jpg: 384x640 2 persons, 2 ties, Done. (0.012s)
+Model Summary: 232 layers, 7249215 parameters, 0 gradients, 16.8 GFLOPS
+video 1/1 (1/1800) /content/canaa_dos_carajas/video.mp4: 384x640 1 lixo, Done. (0.377s)
+video 1/1 (2/1800) /content/canaa_dos_carajas/video.mp4: 384x640 1 lixo, Done. (0.281s)
+video 1/1 (3/1800) /content/canaa_dos_carajas/video.mp4: 384x640 Done. (0.280s)
+video 1/1 (4/1800) /content/canaa_dos_carajas/video.mp4: 384x640 Done. (0.276s)
+video 1/1 (5/1800) /content/canaa_dos_carajas/video.mp4: 384x640 Done. (0.280s)
+video 1/1 (6/1800) /content/canaa_dos_carajas/video.mp4: 384x640 Done. (0.278s)
+video 1/1 (7/1800) /content/canaa_dos_carajas/video.mp4: 384x640 Done. (0.282s)
+video 1/1 (8/1800) /content/canaa_dos_carajas/video.mp4: 384x640 Done. (0.272s)
+video 1/1 (9/1800) /content/canaa_dos_carajas/video.mp4: 384x640 Done. (0.276s)
+video 1/1 (10/1800) /content/canaa_dos_carajas/video.mp4: 384x640 Done. (0.282s)
+video 1/1 (11/1800) /content/canaa_dos_carajas/video.mp4: 384x640 Done. (0.284s)
+video 1/1 (12/1800) /content/canaa_dos_carajas/video.mp4: 384x640 Done. (0.282s)
+                                 .
+                                 .
+                                 .
+video 1/1 (1800/1800) /content/canaa_dos_carajas/video.mp4: 384x640 Done. (0.282s)
 Results saved to runs/detect/exp
 Done. (0.113s)
 ```
