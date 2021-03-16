@@ -49,7 +49,7 @@ O dataset totaliza 1028 imagens e 1567 anotações, dívididas em 937 anotaçõe
 ** All checkpoints are trained to 300 epochs with default settings and hyperparameters (no autoaugmentation). 
 ** Test Time Augmentation ([TTA](https://github.com/ultralytics/yolov5/issues/303)) runs at 3 image sizes. **Reproduce TTA** by `python test.py --data coco.yaml --img 832 --iou 0.65 --augment` -->
 
-## Requisitos
+# Requisitos
 
 Python 3.8 ou superior com todas as dependências de [requirements.txt](https://github.com/ultralytics/yolov5/blob/master/requirements.txt) instaladas, incluindo `torch>=1.7`. Para instalar, execute:
 ```bash
@@ -81,7 +81,7 @@ A rede neural costomizada pode ser executado no ambiente do Google Colab (com to
 - **Docker Image** https://hub.docker.com/r/ultralytics/yolov5. See [Docker Quickstart Guide](https://github.com/ultralytics/yolov5/wiki/Docker-Quickstart) ![Docker Pulls](https://img.shields.io/docker/pulls/ultralytics/yolov5?logo=docker)-->
 
 
-## Inferêcias
+# Inferêcias
 
 detect.py executa inferências em uma variedade de fontes, baixando modelos automaticamente da [versão mais recente do YOLOv5](https://github.com/ultralytics/yolov5/releases) e salvando os resultados em `runs/detect`.
 ```bash
@@ -120,9 +120,11 @@ Done. (0.113s)
 
 
 
-## Treino
+# Treino
 
-Download [COCO](https://github.com/ultralytics/yolov5/blob/master/data/scripts/get_coco.sh) e execute o comando abaixo. Tempos de treinamento para YOLOv5s/m/l/x são 2/4/6/8 dias em um único V100 (multi-GPU times faster). Usar o maior `--batch-size` sua GPU permite (tamanhos de lote mostrados para dispositivos de 16 GB).
+Faça o download de [COCO](https://github.com/ultralytics/yolov5/blob/master/data/scripts/get_coco.sh) e execute o comando abaixo. Tempos de treinamento para YOLOv5s/m/l/x são em média 2/4/6/8 dias em um único V100 (multi-GPU times faster). Usar o maior `--batch-size` exige uma maior GPU, caso a GPU não tenha alta capacidade, optar por --batch-size 16.
+Este tutorial utiliza a arquitetura YOLOv5s.  
+
 ```bash
 $ python train.py --data coco.yaml --cfg yolov5s.yaml --weights '' --batch-size 64
                                          yolov5m                                40
