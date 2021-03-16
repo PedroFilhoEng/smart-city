@@ -83,7 +83,7 @@ A rede neural costomizada pode ser executado no ambiente do Google Colab (com to
 
 # Inferêcias
 
-detect.py executa inferências em uma variedade de fontes, baixando modelos automaticamente da [versão mais recente do YOLOv5](https://github.com/ultralytics/yolov5/releases) e salvando os resultados em `runs/detect`.
+O script detect.py executa inferências em uma variedade de fontes, baixando modelos automaticamente da [versão mais recente do YOLOv5](https://github.com/ultralytics/yolov5/releases) e salvando os resultados em `runs/detect`.
 ```bash
 $ python detect.py --source 0  # webcam
                             file.jpg  # image 
@@ -95,27 +95,27 @@ $ python detect.py --source 0  # webcam
                             http://112.50.243.8/PLTV/88888888/224/3221225900/1.m3u8  # http stream
 ```
 
-Para executar inferência em imagens de exemplo em `data/images`:
+Para executar inferência em imagens de exemplo em `canaa_dos_carajas/imagens`:
 ```bash
-$ python detect.py --source data/images --weights yolov5s.pt --conf 0.25
+$ !python detect.py --weights /content/canaa_dos_carajas/runs/train/yolov5s_results/weights/last.pt --img 416 --conf 0.4 --source /content/canaa_dos_carajas/imagens
 
-Namespace(agnostic_nms=False, augment=False, classes=None, conf_thres=0.25, device='', img_size=640, iou_thres=0.45, save_conf=False, save_dir='runs/detect', save_txt=False, source='data/images/', update=False, view_img=False, weights=['yolov5s.pt'])
-Using torch 1.7.0+cu101 CUDA:0 (Tesla V100-SXM2-16GB, 16130MB)
-
-Downloading https://github.com/ultralytics/yolov5/releases/download/v3.1/yolov5s.pt to yolov5s.pt... 100%|██████████████| 14.5M/14.5M [00:00<00:00, 21.3MB/s]
+Namespace(agnostic_nms=False, augment=False, classes=None, conf_thres=0.4, device='', exist_ok=False, img_size=416, iou_thres=0.45, name='exp', project='runs/detect', save_conf=False, save_txt=False, source='/content/canaa_dos_carajas/imagens', update=False, view_img=False, weights=['/content/canaa_dos_carajas/runs/train/yolov5s_results/weights/last.pt'])
+YOLOv5 🚀 d8c50c2 torch 1.8.0+cu101 CPU
 
 Fusing layers... 
-Model Summary: 232 layers, 7459581 parameters, 0 gradients
-image 1/2 data/images/bus.jpg: 640x480 4 persons, 1 buss, 1 skateboards, Done. (0.012s)
-image 2/2 data/images/zidane.jpg: 384x640 2 persons, 2 ties, Done. (0.012s)
-Results saved to runs/detect/exp
-Done. (0.113s)
+Model Summary: 232 layers, 7249215 parameters, 0 gradients, 16.8 GFLOPS
+image 1/4 /content/canaa_dos_carajas/imagens/caixa-dagua--2-_jpg.rf.2169d853ce03d7c936bfe85eda2320dd.jpg: 416x416 2 aguas, Done. (0.217s)
+image 2/4 /content/canaa_dos_carajas/imagens/caixa-dagua--2-_jpg.rf.424082d0c3033a440af3508f468b6c2b.jpg: 416x416 2 aguas, Done. (0.215s)
+image 3/4 /content/canaa_dos_carajas/imagens/caixa-dagua--2-_jpg.rf.eeee35b53575bd3d8926759848ed9a3b.jpg: 416x416 2 aguas, Done. (0.207s)
+image 4/4 /content/canaa_dos_carajas/imagens/caixa-dagua--3-_jpg.rf.0d89f19be42dd7abcaa7a8687862cd03.jpg: 416x416 2 aguas, Done. (0.221s)
+Results saved to runs/detect/exp2
+Done. (0.912s)
 ```
 <img src="https://user-images.githubusercontent.com/35050296/110505082-97085c00-80dc-11eb-8174-7b45270e4a28.png" width="480">
 
 Para executar inferência em vídeos:
 ```bash
-$ python detect.py --source TESTE.mp4 --weights yolov5s.pt --conf 0.25
+$ !python detect.py --weights /content/canaa_dos_carajas/runs/train/yolov5s_results/weights/last.pt --conf 0.4 --source video.mp4
 
 Saving TESTE.mp4 to TESTE.mp4
 User uploaded file "TESTE.mp4" with length 9710022 bytes
@@ -140,20 +140,15 @@ video 1/1 (12/1800) /content/canaa_dos_carajas/video.mp4: 384x640 Done. (0.282s)
                                  .
                                  .
                                  .
-video 1/1 (1800/1800) /content/canaa_dos_carajas/video.mp4: 384x640 Done. (0.282s)
+video 1/1 (1797/1800) /content/canaa_dos_carajas/video.mp4: 384x640 1 lixo, Done. (0.276s)
+video 1/1 (1798/1800) /content/canaa_dos_carajas/video.mp4: 384x640 1 lixo, Done. (0.280s)
+video 1/1 (1799/1800) /content/canaa_dos_carajas/video.mp4: 384x640 1 lixo, Done. (0.281s)
+video 1/1 (1800/1800) /content/canaa_dos_carajas/video.mp4: 384x640 Done. (0.278s)
 Results saved to runs/detect/exp
-Done. (0.113s)
+Done. (535.095s)
 ```
 
-
-
 ![gif](https://github.com/PedroFilhoEng/smart-city-canaa/blob/dfe41ba4e5340ac5c8aee2cf3498160a99fdc407/Animated%20GIF-downsized_large.gif)
-
-
-
-
-<!--![image](https://user-images.githubusercontent.com/35050296/110505082-97085c00-80dc-11eb-8174-7b45270e4a28.png)-->
-
 
 
 # Treino
