@@ -1,21 +1,21 @@
-# Detecção de Potenciais Focos de Reprodução de Mosquitos | YoloV5 - Pytorch   
+# Detecção de Potenciais Focos de Reprodução de Mosquitos | YoloV4 - Darknet 
 
-Este repositório representa a pesquisa de detecção de objetos aplicada ao problema de identificação de potenciais focos de reprodução de mosquitos do gênero Aedes, cujo o objetivo é delimitar e classificar as possíveis regiões de interesse em imagens ou vídeos. A rede neural utilizada como base para a transferência de aprendizado foi a [YOLOV5](https://pytorch.org/hub/ultralytics_yolov5/), que utiliza o [framework Pytorch](pytorch.org).
+Este repositório representa a pesquisa de detecção de objetos aplicada ao problema de identificação de potenciais focos de reprodução de mosquitos do gênero Aedes, cujo o objetivo é delimitar e classificar as possíveis regiões de interesse em imagens ou vídeos. A rede neural utilizada como base para a transferência de aprendizado foi a [YOLOV4](https://github.com/roboflow-ai/darknet.git), que utiliza o [framework Darknet](https://pjreddie.com/darknet/yolo/).
 
 
 
 ![gif](https://github.com/PedroFilhoEng/smart-city-canaa/blob/a12c3ce0f307e35bd8feabf0fbddbcf2db9461be/Fazenda_YOLOV5.gif)
 
 # Conjunto de Treinamento - Dataset
-O [conjunto de dados (DATASET)](https://app.roboflow.com/dataset/duas_classes) utilizado no treinamento da rede, foi resultado da pesquisa de diferentes fontes de imagens e vídeos relacionados. O dataset foi anotado manualmente e possui duas classes: **Água** e **Lixo**. Para anotar os dados foi utilizada a plataforma [Roboflow](https://app.roboflow.com/). 
+O [conjunto de dados (DATASET)](https://app.roboflow.com/ds/718N6C8kGj?key=6wbmJBk15G) utilizado no treinamento da rede, foi resultado da pesquisa de diferentes fontes de imagens e vídeos relacionados. O dataset foi anotado manualmente e possui duas classes: **Água** e **Lixo**. Para anotar os dados foi utilizada a plataforma [Roboflow](https://app.roboflow.com/). 
 ** O modelo e o dataset estão em desenvolvimento ativo e estão sujeitos a modificações. 
 
 ### Detalhes do Conjunto de Dados
-O dataset totaliza 1028 imagens e 1567 anotações, dívididas em 937 anotações para a classe Água e 630 anotações para a classe Lixo.
+O dataset totaliza 1191 imagens e 1786 anotações, dívididas em 1156 anotações para a classe Água e 630 anotações para a classe Lixo.
 #### Resumo:
-- **Imagens**: 1028;
-- **Anotações**: 1567;
-- **Balanço de Classe**: Água:937 | Lixo: 630.
+- **Imagens**: 1191;
+- **Anotações**: 1786;
+- **Balanço de Classe**: Água:1156 | Lixo: 630.
  
 <img src="https://github.com/PedroFilhoEng/smart-city-canaa/blob/7f588b73b190ae22ae2ede5b7783a5062f3a3afa/test_batch2_pred.jpg" width="900">
 
