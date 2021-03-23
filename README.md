@@ -178,35 +178,7 @@ Argumentos:
 - **cache:** armazenas as imagens em cache para agilizar o treino
 <img src="https://github.com/PedroFilhoEng/smart-city-canaa/blob/76c7e18c87f2e1f89f47c2daabbebcd5083963fe/results.png" width="900">
 
-<!--
-## Citation
 
-[![DOI](https://zenodo.org/badge/264818686.svg)](https://zenodo.org/badge/latestdoi/264818686)
--->
-<!--
-## About Us
-
-Ultralytics is a U.S.-based particle physics and AI startup with over 6 years of expertise supporting government, academic and business clients. We offer a wide range of vision AI services, spanning from simple expert advice up to delivery of fully customized, end-to-end production solutions, including:
-- **Cloud-based AI** systems operating on **hundreds of HD video streams in realtime.**
-- **Edge AI** integrated into custom iOS and Android apps for realtime **30 FPS video inference.**
-- **Custom data training**, hyperparameter evolution, and model exportation to any destination.
-
-For business inquiries and professional support requests please visit us at https://www.ultralytics.com. 
--->
-<!--
-## Contact
-
-**Issues should be raised directly in the repository.** For business inquiries or professional support requests please visit https://www.ultralytics.com or email Glenn Jocher at glenn.jocher@ultralytics.com. 
--->
-<!--
-# Tutorial - Teste de Vídeo com YoloV5
-
-This repo implements [SSD (Single Shot MultiBox Detector)](https://arxiv.org/abs/1512.02325). The implementation is heavily influenced by the projects [ssd.pytorch](https://github.com/amdegroot/ssd.pytorch) and [Detectron](https://github.com/facebookresearch/Detectron).
-The design goal is modularity and extensibility.
-
-Currently, it has MobileNetV1, MobileNetV2, and VGG based SSD/SSD-Lite implementations. 
-
-It also has out-of-box support for retraining on Google Open Images dataset.
 
 
 
