@@ -175,7 +175,7 @@ Argumentos:
 - **name:** nome dos resultados
 - **nosave:** salva apenas na última época
 - **cache:** armazenas as imagens em cache para agilizar o treino
-<img src="https://github.com/PedroFilhoEng/smart-city-canaa/blob/f9070052d45053c15af8b98c92c667cfb71eeef2/Tutorial/resultados_yolov4.png" width="900">
+<img src="https://github.com/PedroFilhoEng/smart-city-canaa/blob/f9070052d45053c15af8b98c92c667cfb71eeef2/Tutorial/resultados_yolov4.png" width="600">
 
 
 
