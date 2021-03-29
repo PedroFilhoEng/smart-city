@@ -56,6 +56,9 @@ Python 3.8 ou superior com todas as dependências de [requirements.txt](https://
 ```bash
 !/usr/local/cuda/bin/nvcc --version
 ```
+| Model | AP<sup>val</sup> | AP<sup>test</sup> | AP<sub>50</sub> | Speed<sub>GPU</sub> | FPS<sub>GPU</sub> || params | FLOPS |
+|---------- |------ |------ |------ | -------- | ------| ------ |------  |  :------: |
+
 +-----------------------------------------------------------------------------+
 | NVIDIA-SMI 460.56       Driver Version: 460.32.03    CUDA Version: 11.2     |
 |-------------------------------+----------------------+----------------------+
