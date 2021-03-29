@@ -3,8 +3,8 @@
 Este repositório representa a pesquisa de detecção de objetos aplicada ao problema de identificação de potenciais focos de reprodução de mosquitos do gênero Aedes, cujo o objetivo é delimitar e classificar as possíveis regiões de interesse em imagens ou vídeos. A rede neural utilizada como base para a transferência de aprendizado foi a [YOLOV4](https://github.com/roboflow-ai/darknet.git), que utiliza o [framework Darknet](https://pjreddie.com/darknet/yolo/).
 
 
-![gif](https://github.com/PedroFilhoEng/smart-city-canaa/blob/4511667a76d649b4ff5ea0c9815ace2bfc1179a1/Tutorial/gifs/GIF_inferencias_canaa_dos_carajas_yolov4.gif)
-
+<!--![gif](https://github.com/PedroFilhoEng/smart-city-canaa/blob/4511667a76d649b4ff5ea0c9815ace2bfc1179a1/Tutorial/gifs/GIF_inferencias_canaa_dos_carajas_yolov4.gif)-->
+![gif](https://media.giphy.com/media/NMp90gcoa18Xgk43ht/giphy.gif)
 ![gif](https://media.giphy.com/media/NMp90gcoa18Xgk43ht/giphy.gif)
 
 # Conjunto de Treinamento - Dataset
