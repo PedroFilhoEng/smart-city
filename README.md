@@ -5,7 +5,7 @@ Este repositório representa a pesquisa de detecção de objetos aplicada ao pro
 
 ![gif](https://github.com/PedroFilhoEng/smart-city-canaa/blob/4511667a76d649b4ff5ea0c9815ace2bfc1179a1/Tutorial/gifs/GIF_inferencias_canaa_dos_carajas_yolov4.gif)
 
-![gif](https://media.giphy.com/media/NMp90gcoa18Xgk43ht/giphy.gif | width=100)
+![gif](https://media.giphy.com/media/NMp90gcoa18Xgk43ht/giphy.gif)
 
 # Conjunto de Treinamento - Dataset
 O [conjunto de dados (DATASET)](https://app.roboflow.com/ds/718N6C8kGj?key=6wbmJBk15G) utilizado no treinamento da rede, foi resultado da pesquisa de diferentes fontes de imagens e vídeos relacionados. O dataset foi anotado manualmente e possui duas classes: **Água** e **Lixo**. Para anotar os dados foi utilizada a plataforma [Roboflow](https://app.roboflow.com/). 
