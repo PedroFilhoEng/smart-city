@@ -232,4 +232,58 @@ Argumentos:
 - **name:** nome dos resultados
 - **nosave:** salva apenas na última época
 - **cache:** armazenas as imagens em cache para agilizar o treino
+```bash
+                                     .
+                                     .
+                                     .
+(next mAP calculation at 4000 iterations) 
+ Last accuracy mAP@0.5 = 90.01 %, best = 90.37 % 
+ 3996: 1.369911, 1.617500 avg loss, 0.000010 rate, 8.128796 seconds, 191808 images, 0.161254 hours left
+Loaded: 0.000036 seconds
+
+ (next mAP calculation at 4000 iterations) 
+ Last accuracy mAP@0.5 = 90.01 %, best = 90.37 % 
+ 3997: 1.503854, 1.606135 avg loss, 0.000010 rate, 8.090233 seconds, 191856 images, 0.159732 hours left
+Loaded: 0.000039 seconds
+
+ (next mAP calculation at 4000 iterations) 
+ Last accuracy mAP@0.5 = 90.01 %, best = 90.37 % 
+ 3998: 1.252686, 1.570790 avg loss, 0.000010 rate, 8.194810 seconds, 191904 images, 0.158202 hours left
+Loaded: 0.000047 seconds
+
+ (next mAP calculation at 4000 iterations) 
+ Last accuracy mAP@0.5 = 90.01 %, best = 90.37 % 
+ 3999: 2.188731, 1.632584 avg loss, 0.000010 rate, 8.167288 seconds, 191952 images, 0.156666 hours left
+Loaded: 0.000034 seconds
+
+ (next mAP calculation at 4000 iterations) 
+ Last accuracy mAP@0.5 = 90.01 %, best = 90.37 % 
+ 4000: 1.721517, 1.641478 avg loss, 0.000010 rate, 8.081005 seconds, 192000 images, 0.155122 hours left
+Resizing to initial size: 416 x 416  try to allocate additional workspace_size = 52.43 MB 
+ CUDA allocate done! 
+
+ calculation mAP (mean average precision)...
+172
+ detections_count = 710, unique_truth_count = 297  
+class_id = 0, name = agua, ap = 84.52%   	 (TP = 183, FP = 38) 
+class_id = 1, name = lixo, ap = 95.31%   	 (TP = 65, FP = 9) 
+
+ for conf_thresh = 0.25, precision = 0.84, recall = 0.84, F1-score = 0.84 
+ for conf_thresh = 0.25, TP = 248, FP = 47, FN = 49, average IoU = 62.44 % 
+
+ IoU threshold = 50 %, used Area-Under-Curve for each unique Recall 
+ mean average precision (mAP@0.50) = 0.899153, or 89.92 % 
+Total Detection Time: 5 Seconds
+
+Set -points flag:
+ `-points 101` for MS COCO 
+ `-points 11` for PascalVOC 2007 (uncomment `difficult` in voc.data) 
+ `-points 0` (AUC) for ImageNet, PascalVOC 2010-2012, your custom dataset
+
+ mean_average_precision (mAP@0.5) = 0.899153 
+Saving weights to backup//custom-yolov4-detector_4000.weights
+Saving weights to backup//custom-yolov4-detector_last.weights
+Saving weights to backup//custom-yolov4-detector_final.weights
+
+```
 <img src="https://github.com/PedroFilhoEng/smart-city-canaa/blob/f9070052d45053c15af8b98c92c667cfb71eeef2/Tutorial/resultados_yolov4.png" width="600">
