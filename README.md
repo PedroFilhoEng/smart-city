@@ -115,7 +115,7 @@ A rede neural costomizada pode ser executado no ambiente do Google Colab (com to
 - **Docker Image** https://hub.docker.com/r/ultralytics/yolov5. See [Docker Quickstart Guide](https://github.com/ultralytics/yolov5/wiki/Docker-Quickstart) ![Docker Pulls](https://img.shields.io/docker/pulls/ultralytics/yolov5?logo=docker)-->
 
 
-# Inferêcias
+# Inferências
 
 O script **detector.py** executa inferências em uma variedade de fontes, o exemplo ilustra a detecção em imagens e em vídeo.
 ```bash
