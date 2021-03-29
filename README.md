@@ -211,27 +211,12 @@ input video stream closed.
 
 # Treino
 
-Faça o download de [COCO](https://github.com/ultralytics/yolov5/blob/master/data/scripts/get_coco.sh) e execute o comando abaixo. Tempos de treinamento para YOLOv5s/m/l/x são em média 2/4/6/8 dias em um único V100 (multi-GPU times faster). Usar o maior `--batch-size` exige uma maior GPU, caso a GPU não tenha alta capacidade, optar por --batch-size 16.
-Este tutorial utiliza a arquitetura YOLOv5s.  
-
+Baixe pesos pré-treinados para as camadas convolucionais[yolov4.conv.137](https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v3_optimal/yolov4.conv.137) e execute o comando abaixo.
 ```bash
-!./darknet detector train data/obj.data cfg/custom-yolov4-detector.cfg backup/yolov4.weights -dont_show -map
-
+%cd /content/darknet
+!./darknet detector train data/obj.data cfg/custom-yolov4-detector.cfg yolov4.conv.137 -dont_show -map
 ```
-Neste tutorial o comando para treino foi o seguinte:
-```bash
-$ !python train.py --data '../data.yaml' --cfg ./models/custom_yolov5s.yaml --weights ''--batch 16  --img 416  --epochs 4000  --name yolov5s_results  --cache
-```
-Argumentos:
-- **img:** define o tamanho da imagem de entrada
-- **batch:** determina o batch
-- **epochs:** define o número de épocas de treinamento. (Obs: é comum definir epochs = 2000*número_de_classes)
-- **data:** define o caminho para o arquivo yaml
-- **cfg:** especifica a configuração do modelo
-- **weights:** especifica um caminho personalizado para os pesos. (Obs.: você pode baixar os pesos da [Pasta](https://github.com/PedroFilhoEng/canaa_dos_carajas/blob/d8c50c2810130aa0722f92791fbbba46a16f0944/runs/train/yolov5s_results/weights))
-- **name:** nome dos resultados
-- **nosave:** salva apenas na última época
-- **cache:** armazenas as imagens em cache para agilizar o treino
+Clique [aqui](https://drive.google.com/file/d/1V-3kvohQIsB1uE5SdbSTvAgc6J7KZ_6r/view?usp=sharing) para baixar os pesos pré-treinados resultantes do treinamento com o [conjunto de dados (DATASET)](https://app.roboflow.com/ds/718N6C8kGj?key=6wbmJBk15G).
 ```bash
                                      .
                                      .
