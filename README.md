@@ -211,7 +211,7 @@ input video stream closed.
 
 # Treino
 
-Baixe pesos pré-treinados para as camadas convolucionais[yolov4.conv.137](https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v3_optimal/yolov4.conv.137) e execute o comando abaixo.
+Baixe pesos pré-treinados para as camadas convolucionais [yolov4.conv.137](https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v3_optimal/yolov4.conv.137) e execute o comando abaixo.
 ```bash
 %cd /content/darknet
 !./darknet detector train data/obj.data cfg/custom-yolov4-detector.cfg yolov4.conv.137 -dont_show -map
