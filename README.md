@@ -126,7 +126,7 @@ O script **detector.py** executa inferências em uma variedade de fontes, o exem
 
 **Para executar inferência em imagens de exemplo em `/canaa_dos_carajas/imagens`:**
 ```bash
-$ !python detect.py --weights /content/canaa_dos_carajas/runs/train/yolov5s_results/weights/last.pt --img 416 --conf 0.4 --source /content/canaa_dos_carajas/imagens
+!./darknet detector test data/obj.data cfg/custom-yolov4-detector.cfg backup/yolov4.weights file.jpg  # image 
 
 CUDA-version: 11000 (11020), cuDNN: 7.6.5, GPU count: 1  
  OpenCV version: 3.2.0
@@ -163,6 +163,7 @@ test/1.jpg: Predicted in 11.755000 milli-seconds.
 lixo: 85%
 lixo: 78%
 lixo: 83%
+lixo: 73%
 agua: 90%
 Unable to init server: Could not connect: Connection refused
 
@@ -172,7 +173,8 @@ Unable to init server: Could not connect: Connection refused
 
 **Para executar inferência em vídeos em `/canaa_dos_carajas`:**
 ```bash
-$ !python detect.py --weights /content/canaa_dos_carajas/runs/train/yolov5s_results/weights/last.pt --conf 0.4 --source video.mp4
+%cd /canaa_dos_carajas
+!./darknet detector demo data/obj.data cfg/custom-yolov4-detector.cfg backup/yolov4.weights -dont_show ./video.mp4 -i 0 -out_filename ./inferencia_yolov4.mp4 # video
 
 Saving TESTE.mp4 to TESTE.mp4
 User uploaded file "TESTE.mp4" with length 9710022 bytes
@@ -214,10 +216,36 @@ Faça o download de [COCO](https://github.com/ultralytics/yolov5/blob/master/dat
 Este tutorial utiliza a arquitetura YOLOv5s.  
 
 ```bash
-$ python train.py --data coco.yaml --cfg yolov5s.yaml --weights '' --batch-size 64
-                                         yolov5m                                40
-                                         yolov5l                                24
-                                         yolov5x                                16
+!./darknet detector train data/obj.data cfg/custom-yolov4-detector.cfg backup/yolov4.weights -dont_show -map
+darknet.exe detector demo cfg/coco.data cfg/yolov4.cfg yolov4.weights -ext_output test.mp4
+
+
+cvWriteFrame 
+Objects:
+
+agua: 48% 
+
+FPS:33.7 	 AVG_FPS:39.6
+
+ cvWriteFrame 
+Objects:
+
+agua: 54% 
+
+FPS:34.6 	 AVG_FPS:39.6
+
+ cvWriteFrame 
+Objects:
+
+agua: 46% 
+
+FPS:35.0 	 AVG_FPS:39.6
+
+ cvWriteFrame 
+Stream closed.
+input video stream closed. 
+ closing... closed!output_video_writer closed. 
+
 ```
 Neste tutorial o comando para treino foi o seguinte:
 ```bash
