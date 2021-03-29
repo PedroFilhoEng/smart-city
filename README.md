@@ -168,7 +168,7 @@ Unable to init server: Could not connect: Connection refused
 
 (predictions:4089): Gtk-WARNING **: 23:24:49.356: open display: 
 ```
-<img src="https://github.com/PedroFilhoEng/smart-city-canaa/blob/fbb601c689c8f44612cac49348d364e1d590b0fc/Tutorial/gifs/resultado_2.jpg" width="480">
+<img src="https://github.com/PedroFilhoEng/smart-city-canaa/blob/fbb601c689c8f44612cac49348d364e1d590b0fc/Tutorial/gifs/resultado_2.jpg" width="680">
 
 **Para executar inferência em vídeos em `/canaa_dos_carajas`:**
 ```bash
