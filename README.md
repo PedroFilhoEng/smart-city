@@ -127,7 +127,8 @@ O script **detector.py** executa inferências em uma variedade de fontes, o exem
 **Para executar inferência em imagens de exemplo em `/canaa_dos_carajas/imagens`:**
 ```bash
 !./darknet detector test data/obj.data cfg/custom-yolov4-detector.cfg backup/yolov4.weights file.jpg  # image 
-
+```
+```bash
 CUDA-version: 11000 (11020), cuDNN: 7.6.5, GPU count: 1  
  OpenCV version: 3.2.0
  compute_capability = 700, cudnn_half = 0 
