@@ -176,8 +176,8 @@ Unable to init server: Could not connect: Connection refused
 ```bash
 %cd /canaa_dos_carajas
 !./darknet detector demo cfg/coco.data cfg/yolov4.cfg yolov4.weights -ext_output test.mp4
-
-
+```
+```bash
 cvWriteFrame 
 Objects:
 
@@ -217,7 +217,7 @@ Baixe pesos pré-treinados para as camadas convolucionais [yolov4.conv.137](http
 %cd /content/darknet
 !./darknet detector train data/obj.data cfg/custom-yolov4-detector.cfg yolov4.conv.137 -dont_show -map
 ```
-Clique [aqui](https://drive.google.com/file/d/1V-3kvohQIsB1uE5SdbSTvAgc6J7KZ_6r/view?usp=sharing) para baixar os pesos pré-treinados resultantes do treinamento com o [conjunto de dados (DATASET)](https://app.roboflow.com/ds/718N6C8kGj?key=6wbmJBk15G).
+
 ```bash
                                      .
                                      .
@@ -272,4 +272,9 @@ Saving weights to backup//custom-yolov4-detector_last.weights
 Saving weights to backup//custom-yolov4-detector_final.weights
 
 ```
+Clique [aqui](https://drive.google.com/file/d/1V-3kvohQIsB1uE5SdbSTvAgc6J7KZ_6r/view?usp=sharing) para baixar os pesos pré-treinados resultantes do treinamento com o [conjunto de dados (DATASET)](https://app.roboflow.com/ds/718N6C8kGj?key=6wbmJBk15G).
+
+# Resultados
+Utilizando o [conjunto de dados (DATASET)](https://app.roboflow.com/ds/718N6C8kGj?key=6wbmJBk15G), em 4000 épocas de treinamento a rede [YOLOV4](https://github.com/roboflow-ai/darknet.git) obteve a média de precisão de 89,9%.
+* mean_average_precision (mAP@0.5) = 0.899153 
 <img src="https://github.com/PedroFilhoEng/smart-city-canaa/blob/f9070052d45053c15af8b98c92c667cfb71eeef2/Tutorial/resultados_yolov4.png" width="600">
