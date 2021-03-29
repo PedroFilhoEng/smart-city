@@ -174,50 +174,7 @@ Unable to init server: Could not connect: Connection refused
 **Para executar inferência em vídeos em `/canaa_dos_carajas`:**
 ```bash
 %cd /canaa_dos_carajas
-!./darknet detector demo data/obj.data cfg/custom-yolov4-detector.cfg backup/yolov4.weights -dont_show ./video.mp4 -i 0 -out_filename ./inferencia_yolov4.mp4 # video
-
-Saving TESTE.mp4 to TESTE.mp4
-User uploaded file "TESTE.mp4" with length 9710022 bytes
-     |████████████████████████████████| 645kB 4.3MB/s 
-Namespace(agnostic_nms=False, augment=False, classes=None, conf_thres=0.4, device='', exist_ok=False, img_size=640, iou_thres=0.45, name='exp', project='runs/detect', save_conf=False, save_txt=False, source='video.mp4', update=False, view_img=False, weights=['/content/canaa_dos_carajas/runs/train/yolov5s_results/weights/last.pt'])
-YOLOv5 🚀 d8c50c2 torch 1.8.0+cu101 CPU
-
-Fusing layers... 
-Model Summary: 232 layers, 7249215 parameters, 0 gradients, 16.8 GFLOPS
-video 1/1 (1/1800) /content/canaa_dos_carajas/video.mp4: 384x640 1 lixo, Done. (0.377s)
-video 1/1 (2/1800) /content/canaa_dos_carajas/video.mp4: 384x640 1 lixo, Done. (0.281s)
-video 1/1 (3/1800) /content/canaa_dos_carajas/video.mp4: 384x640 Done. (0.280s)
-video 1/1 (4/1800) /content/canaa_dos_carajas/video.mp4: 384x640 Done. (0.276s)
-video 1/1 (5/1800) /content/canaa_dos_carajas/video.mp4: 384x640 Done. (0.280s)
-video 1/1 (6/1800) /content/canaa_dos_carajas/video.mp4: 384x640 Done. (0.278s)
-video 1/1 (7/1800) /content/canaa_dos_carajas/video.mp4: 384x640 Done. (0.282s)
-video 1/1 (8/1800) /content/canaa_dos_carajas/video.mp4: 384x640 Done. (0.272s)
-video 1/1 (9/1800) /content/canaa_dos_carajas/video.mp4: 384x640 Done. (0.276s)
-video 1/1 (10/1800) /content/canaa_dos_carajas/video.mp4: 384x640 Done. (0.282s)
-video 1/1 (11/1800) /content/canaa_dos_carajas/video.mp4: 384x640 Done. (0.284s)
-video 1/1 (12/1800) /content/canaa_dos_carajas/video.mp4: 384x640 Done. (0.282s)
-                                 .
-                                 .
-                                 .
-video 1/1 (1797/1800) /content/canaa_dos_carajas/video.mp4: 384x640 1 lixo, Done. (0.276s)
-video 1/1 (1798/1800) /content/canaa_dos_carajas/video.mp4: 384x640 1 lixo, Done. (0.280s)
-video 1/1 (1799/1800) /content/canaa_dos_carajas/video.mp4: 384x640 1 lixo, Done. (0.281s)
-video 1/1 (1800/1800) /content/canaa_dos_carajas/video.mp4: 384x640 Done. (0.278s)
-Results saved to runs/detect/exp
-Done. (535.095s)
-```
-
-![gif](https://github.com/PedroFilhoEng/smart-city-canaa/blob/dfe41ba4e5340ac5c8aee2cf3498160a99fdc407/Animated%20GIF-downsized_large.gif)
-
-
-# Treino
-
-Faça o download de [COCO](https://github.com/ultralytics/yolov5/blob/master/data/scripts/get_coco.sh) e execute o comando abaixo. Tempos de treinamento para YOLOv5s/m/l/x são em média 2/4/6/8 dias em um único V100 (multi-GPU times faster). Usar o maior `--batch-size` exige uma maior GPU, caso a GPU não tenha alta capacidade, optar por --batch-size 16.
-Este tutorial utiliza a arquitetura YOLOv5s.  
-
-```bash
-!./darknet detector train data/obj.data cfg/custom-yolov4-detector.cfg backup/yolov4.weights -dont_show -map
-darknet.exe detector demo cfg/coco.data cfg/yolov4.cfg yolov4.weights -ext_output test.mp4
+!./darknet detector demo cfg/coco.data cfg/yolov4.cfg yolov4.weights -ext_output test.mp4
 
 
 cvWriteFrame 
@@ -233,7 +190,9 @@ Objects:
 agua: 54% 
 
 FPS:34.6 	 AVG_FPS:39.6
-
+                   .
+                   .
+                   .
  cvWriteFrame 
 Objects:
 
@@ -245,6 +204,18 @@ FPS:35.0 	 AVG_FPS:39.6
 Stream closed.
 input video stream closed. 
  closing... closed!output_video_writer closed. 
+```
+
+![gif](https://github.com/PedroFilhoEng/smart-city-canaa/blob/dfe41ba4e5340ac5c8aee2cf3498160a99fdc407/Animated%20GIF-downsized_large.gif)
+
+
+# Treino
+
+Faça o download de [COCO](https://github.com/ultralytics/yolov5/blob/master/data/scripts/get_coco.sh) e execute o comando abaixo. Tempos de treinamento para YOLOv5s/m/l/x são em média 2/4/6/8 dias em um único V100 (multi-GPU times faster). Usar o maior `--batch-size` exige uma maior GPU, caso a GPU não tenha alta capacidade, optar por --batch-size 16.
+Este tutorial utiliza a arquitetura YOLOv5s.  
+
+```bash
+!./darknet detector train data/obj.data cfg/custom-yolov4-detector.cfg backup/yolov4.weights -dont_show -map
 
 ```
 Neste tutorial o comando para treino foi o seguinte:
