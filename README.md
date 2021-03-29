@@ -8,7 +8,7 @@ Este repositório representa a pesquisa de detecção de objetos aplicada ao pro
 ![gif](https://media.giphy.com/media/QltfI6jrrzWOPhv9Cd/giphy.gif)
 
 # Conjunto de Treinamento - Dataset
-O [conjunto de dados (DATASET)](https://app.roboflow.com/ds/qhQAgjhQ1R?key=nWEnGoqs42) utilizado no treinamento da rede, foi resultado da pesquisa de diferentes fontes de imagens e vídeos relacionados. O dataset foi anotado manualmente e possui duas classes: **Água** e **Lixo**. Para anotar os dados foi utilizada a plataforma [Roboflow](https://app.roboflow.com/). 
+O [conjunto de dados (DATASET)](https://app.roboflow.com/ds/qhQAgjhQ1R?key=nWEnGoqs42) utilizado no treinamento da rede, foi resultado da pesquisa de diferentes fontes de imagens e vídeos relacionados. O dataset foi anotado manualmente e possui duas classes: **Água** e **Lixo**. Para anotar os dados foi utilizada a plataforma [Roboflow](https://app.roboflow.com/dataset/object_detect_19-03-2021/2). 
 ** O modelo e o dataset estão em desenvolvimento ativo e estão sujeitos a modificações. 
 
 ### Detalhes do Conjunto de Dados
