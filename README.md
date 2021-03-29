@@ -276,5 +276,6 @@ Clique [aqui](https://drive.google.com/file/d/1V-3kvohQIsB1uE5SdbSTvAgc6J7KZ_6r/
 
 # Resultados
 Utilizando o [conjunto de dados (DATASET)](https://app.roboflow.com/ds/718N6C8kGj?key=6wbmJBk15G), em 4000 épocas de treinamento a rede [YOLOV4](https://github.com/roboflow-ai/darknet.git) obteve a média de precisão de 89,9%.
-* mean_average_precision (mAP@0.5) = 0.899153 
+* mean_average_precision (mAP@0.5) = 0.899153;
+* Épocas de treinamento = 4000. 
 <img src="https://github.com/PedroFilhoEng/smart-city-canaa/blob/f9070052d45053c15af8b98c92c667cfb71eeef2/Tutorial/resultados_yolov4.png" width="600">
