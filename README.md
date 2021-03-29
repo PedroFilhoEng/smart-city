@@ -107,7 +107,7 @@ Para verificar a versão CUDA, execute:
 
 ## Ambiente
 
-A rede neural costomizada pode ser executado no ambiente do Google Colab (com todas as dependências, incluindo [**CMake >= 3.8**](https://cmake.org/download/), [CUDA](https://developer.nvidia.com/cuda)/[CUDNN](https://developer.nvidia.com/cudnn) e [**OpenCV >= 2.4**](https://opencv.org/releases/):
+A rede neural costomizada pode ser executado no ambiente do Google Colab (com todas as dependências, incluindo [CMake >= 3.8](https://cmake.org/download/), [CUDA](https://developer.nvidia.com/cuda)/[CUDNN](https://developer.nvidia.com/cudnn) e [OpenCV >= 2.4](https://opencv.org/releases/)):
 
 - **Google Colab Notebook** com GPU grátis: <a href="https://colab.research.google.com/drive/1z12J8_8MeQYHNuFpScIgkV5cW-kQq4b9?authuser=6#scrollTo=W-GbIlPevNHR"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a>
 <!-- - **Kaggle Notebook** with free GPU: [https://www.kaggle.com/ultralytics/yolov5](https://www.kaggle.com/ultralytics/yolov5)
