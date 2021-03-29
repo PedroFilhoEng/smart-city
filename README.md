@@ -51,8 +51,7 @@ O dataset totaliza 1729 imagens e 3179 anotações, dívididas em 1961 anotaçõ
 ** Test Time Augmentation ([TTA](https://github.com/ultralytics/yolov5/issues/303)) runs at 3 image sizes. **Reproduce TTA** by `python test.py --data coco.yaml --img 832 --iou 0.65 --augment` -->
 
 # CUDA
-
-Python 3.8 ou superior com todas as dependências de [requirements.txt](https://github.com/ultralytics/yolov5/blob/master/requirements.txt) instaladas, incluindo `torch>=1.7`. Para instalar, execute:
+Para utilizar o comando nvcc do CUDA toolkit, execute:
 ```bash
 !/usr/local/cuda/bin/nvcc --version
 ```
@@ -64,6 +63,7 @@ Cuda compilation tools, release 11.0, V11.0.221
 Build cuda_11.0_bu.TC445_37.28845127_0
 Mon Mar 29 05:37:30 2021  
 ```
+Para verificar a versão CUDA, execute:
 ```bash
 !nvidia-smi
 ```
