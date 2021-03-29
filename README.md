@@ -119,14 +119,9 @@ A rede neural costomizada pode ser executado no ambiente do Google Colab (com to
 
 O script **detect.py** executa inferências em uma variedade de fontes, baixando modelos automaticamente da [versão mais recente do YOLOv5](https://github.com/ultralytics/yolov5/releases) e salvando os resultados em `runs/detect`.
 ```bash
-$ python detect.py --source 0  # webcam
-                            file.jpg  # image 
-                            file.mp4  # video
-                            path/  # directory
-                            path/*.jpg  # glob
-                            rtsp://170.93.143.139/rtplive/470011e600ef003a004ee33696235daa  # rtsp stream
-                            rtmp://192.168.1.105/live/test  # rtmp stream
-                            http://112.50.243.8/PLTV/88888888/224/3221225900/1.m3u8  # http stream
+%cd /content/darknet
+!./darknet detector demo data/obj.data cfg/custom-yolov4-detector.cfg backup/yolov4.weights -dont_show ./video.mp4 -i 0 -out_filename ./inferencia_yolov4.mp4 # video
+!./darknet detector test data/obj.data cfg/custom-yolov4-detector.cfg backup/yolov4.weights file.jpg  # image                            
 ```
 
 **Para executar inferência em imagens de exemplo em `/canaa_dos_carajas/imagens`:**
