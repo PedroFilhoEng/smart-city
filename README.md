@@ -55,8 +55,19 @@ O dataset totaliza 1729 imagens e 3179 anotações, dívididas em 1961 anotaçõ
 Python 3.8 ou superior com todas as dependências de [requirements.txt](https://github.com/ultralytics/yolov5/blob/master/requirements.txt) instaladas, incluindo `torch>=1.7`. Para instalar, execute:
 ```bash
 !/usr/local/cuda/bin/nvcc --version
-
-
+```
+```bash
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2020 NVIDIA Corporation
+Built on Wed_Jul_22_19:09:09_PDT_2020
+Cuda compilation tools, release 11.0, V11.0.221
+Build cuda_11.0_bu.TC445_37.28845127_0
+Mon Mar 29 05:37:30 2021  
+```
+```bash
+!nvidia-smi
+```
+```bash
 +-----------------------------------------------------------------------------+
 | NVIDIA-SMI 460.56       Driver Version: 460.32.03    CUDA Version: 11.2     |
 |-------------------------------+----------------------+----------------------+
