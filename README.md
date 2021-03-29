@@ -128,19 +128,47 @@ O script **detector.py** executa inferências em uma variedade de fontes, o exem
 ```bash
 $ !python detect.py --weights /content/canaa_dos_carajas/runs/train/yolov5s_results/weights/last.pt --img 416 --conf 0.4 --source /content/canaa_dos_carajas/imagens
 
-Namespace(agnostic_nms=False, augment=False, classes=None, conf_thres=0.4, device='', exist_ok=False, img_size=416, iou_thres=0.45, name='exp', project='runs/detect', save_conf=False, save_txt=False, source='/content/canaa_dos_carajas/imagens', update=False, view_img=False, weights=['/content/canaa_dos_carajas/runs/train/yolov5s_results/weights/last.pt'])
-YOLOv5 🚀 d8c50c2 torch 1.8.0+cu101 CPU
+CUDA-version: 11000 (11020), cuDNN: 7.6.5, GPU count: 1  
+ OpenCV version: 3.2.0
+ compute_capability = 700, cudnn_half = 0 
+net.optimized_memory = 0 
+mini_batch = 1, batch = 24, time_steps = 1, train = 0 
+   layer   filters  size/strd(dil)      input                output
+   0 conv     32       3 x 3/ 1    416 x 416 x   3 ->  416 x 416 x  32 0.299 BF
+   1 conv     64       3 x 3/ 2    416 x 416 x  32 ->  208 x 208 x  64 1.595 BF
+   2 conv     64       1 x 1/ 1    208 x 208 x  64 ->  208 x 208 x  64 0.354 BF
+   3 route  1 		                           ->  208 x 208 x  64 
+                                   .
+                                   .
+                                   .
+ 152 conv    512       3 x 3/ 2     26 x  26 x 256 ->   13 x  13 x 512 0.399 BF
+ 153 route  152 116 	                           ->   13 x  13 x1024 
+ 154 conv    512       1 x 1/ 1     13 x  13 x1024 ->   13 x  13 x 512 0.177 BF
+ 155 conv   1024       3 x 3/ 1     13 x  13 x 512 ->   13 x  13 x1024 1.595 BF
+ 156 conv    512       1 x 1/ 1     13 x  13 x1024 ->   13 x  13 x 512 0.177 BF
+ 157 conv   1024       3 x 3/ 1     13 x  13 x 512 ->   13 x  13 x1024 1.595 BF
+ 158 conv    512       1 x 1/ 1     13 x  13 x1024 ->   13 x  13 x 512 0.177 BF
+ 159 conv   1024       3 x 3/ 1     13 x  13 x 512 ->   13 x  13 x1024 1.595 BF
+ 160 conv     24       1 x 1/ 1     13 x  13 x1024 ->   13 x  13 x  24 0.008 BF
+ 161 yolo
+[yolo] params: iou loss: ciou (4), iou_norm: 0.07, cls_norm: 1.00, scale_x_y: 1.05
+nms_kind: greedynms (1), beta = 0.600000 
+Total BFLOPS 59.578 
+avg_outputs = 490041 
+ Allocate additional workspace_size = 52.43 MB 
+Loading weights from backup/custom-yolov4-detector_final.weights...
+ seen 64, trained: 96 K-images (1 Kilo-batches_64) 
+Done! Loaded 162 layers from weights-file 
+test/1.jpg: Predicted in 11.755000 milli-seconds.
+lixo: 85%
+lixo: 78%
+lixo: 83%
+agua: 90%
+Unable to init server: Could not connect: Connection refused
 
-Fusing layers... 
-Model Summary: 232 layers, 7249215 parameters, 0 gradients, 16.8 GFLOPS
-image 1/4 /content/canaa_dos_carajas/imagens/caixa-dagua--2-_jpg.rf.2169d853ce03d7c936bfe85eda2320dd.jpg: 416x416 2 aguas, Done. (0.217s)
-image 2/4 /content/canaa_dos_carajas/imagens/caixa-dagua--2-_jpg.rf.424082d0c3033a440af3508f468b6c2b.jpg: 416x416 2 aguas, Done. (0.215s)
-image 3/4 /content/canaa_dos_carajas/imagens/caixa-dagua--2-_jpg.rf.eeee35b53575bd3d8926759848ed9a3b.jpg: 416x416 2 aguas, Done. (0.207s)
-image 4/4 /content/canaa_dos_carajas/imagens/caixa-dagua--3-_jpg.rf.0d89f19be42dd7abcaa7a8687862cd03.jpg: 416x416 2 aguas, Done. (0.221s)
-Results saved to runs/detect/exp2
-Done. (0.912s)
+(predictions:4089): Gtk-WARNING **: 23:24:49.356: open display: 
 ```
-<img src="https://user-images.githubusercontent.com/35050296/110505082-97085c00-80dc-11eb-8174-7b45270e4a28.png" width="480">
+<img src="https://github.com/PedroFilhoEng/smart-city-canaa/blob/fbb601c689c8f44612cac49348d364e1d590b0fc/Tutorial/gifs/resultado_2.jpg" width="480">
 
 **Para executar inferência em vídeos em `/canaa_dos_carajas`:**
 ```bash
