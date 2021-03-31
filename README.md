@@ -207,7 +207,7 @@ input video stream closed.
  closing... closed!output_video_writer closed. 
 ```
 
-![gif](https://media.giphy.com/media/XJknI7SqMKMY59JyB4/giphy.gif)
+![gif](https://github.com/PedroFilhoEng/smart-city-canaa/blob/0f24a42e7be3d7444543406481967809290f4b48/Tutorial/gifs/gif_canaa_meninos.gif)
 
 
 # Treino
