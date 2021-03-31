@@ -8,7 +8,7 @@ Este repositório representa a pesquisa de detecção de objetos aplicada ao pro
 ![gif](https://media.giphy.com/media/QltfI6jrrzWOPhv9Cd/giphy.gif)
 
 # Conjunto de Treinamento - Dataset
-O [conjunto de dados (DATASET)](https://app.roboflow.com/ds/718N6C8kGj?key=6wbmJBk15G) utilizado no treinamento da rede, foi resultado da pesquisa de diferentes fontes de imagens e vídeos relacionados. O dataset foi anotado manualmente e possui duas classes: **Água** e **Lixo**. Para anotar os dados foi utilizada a plataforma [Roboflow](https://app.roboflow.com/). 
+O [conjunto de dados (DATASET)](https://app.roboflow.com/ds/qhQAgjhQ1R?key=nWEnGoqs42) utilizado no treinamento da rede, foi resultado da pesquisa de diferentes fontes de imagens e vídeos relacionados. O dataset foi anotado manualmente e possui duas classes: **Água** e **Lixo**. Para anotar os dados foi utilizada a plataforma [Roboflow](https://app.roboflow.com/dataset/object_detect_19-03-2021/2). 
 ** O modelo e o dataset estão em desenvolvimento ativo e estão sujeitos a modificações. 
 
 ### Detalhes do Conjunto de Dados
@@ -107,7 +107,7 @@ Para verificar a versão CUDA, execute:
 
 ## Ambiente
 
-A rede neural costomizada pode ser executado no ambiente do Google Colab (com todas as dependências, incluindo [CUDA](https://developer.nvidia.com/cuda)/[CUDNN](https://developer.nvidia.com/cudnn), [Python](https://www.python.org/) and [PyTorch](https://pytorch.org/) pré-instalados):
+A rede neural costomizada pode ser executado no ambiente do Google Colab (com todas as dependências, incluindo [CMake](https://cmake.org/download/), [CUDA](https://developer.nvidia.com/cuda)/[CUDNN](https://developer.nvidia.com/cudnn) e [OpenCV](https://opencv.org/releases/)):
 
 - **Google Colab Notebook** com GPU grátis: <a href="https://colab.research.google.com/drive/1z12J8_8MeQYHNuFpScIgkV5cW-kQq4b9?authuser=6#scrollTo=W-GbIlPevNHR"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a>
 <!-- - **Kaggle Notebook** with free GPU: [https://www.kaggle.com/ultralytics/yolov5](https://www.kaggle.com/ultralytics/yolov5)
@@ -115,7 +115,7 @@ A rede neural costomizada pode ser executado no ambiente do Google Colab (com to
 - **Docker Image** https://hub.docker.com/r/ultralytics/yolov5. See [Docker Quickstart Guide](https://github.com/ultralytics/yolov5/wiki/Docker-Quickstart) ![Docker Pulls](https://img.shields.io/docker/pulls/ultralytics/yolov5?logo=docker)-->
 
 
-# Inferêcias
+# Inferências
 
 O script **detector.py** executa inferências em uma variedade de fontes, o exemplo ilustra a detecção em imagens e em vídeo.
 ```bash
@@ -126,83 +126,156 @@ O script **detector.py** executa inferências em uma variedade de fontes, o exem
 
 **Para executar inferência em imagens de exemplo em `/canaa_dos_carajas/imagens`:**
 ```bash
-$ !python detect.py --weights /content/canaa_dos_carajas/runs/train/yolov5s_results/weights/last.pt --img 416 --conf 0.4 --source /content/canaa_dos_carajas/imagens
-
-Namespace(agnostic_nms=False, augment=False, classes=None, conf_thres=0.4, device='', exist_ok=False, img_size=416, iou_thres=0.45, name='exp', project='runs/detect', save_conf=False, save_txt=False, source='/content/canaa_dos_carajas/imagens', update=False, view_img=False, weights=['/content/canaa_dos_carajas/runs/train/yolov5s_results/weights/last.pt'])
-YOLOv5 🚀 d8c50c2 torch 1.8.0+cu101 CPU
-
-Fusing layers... 
-Model Summary: 232 layers, 7249215 parameters, 0 gradients, 16.8 GFLOPS
-image 1/4 /content/canaa_dos_carajas/imagens/caixa-dagua--2-_jpg.rf.2169d853ce03d7c936bfe85eda2320dd.jpg: 416x416 2 aguas, Done. (0.217s)
-image 2/4 /content/canaa_dos_carajas/imagens/caixa-dagua--2-_jpg.rf.424082d0c3033a440af3508f468b6c2b.jpg: 416x416 2 aguas, Done. (0.215s)
-image 3/4 /content/canaa_dos_carajas/imagens/caixa-dagua--2-_jpg.rf.eeee35b53575bd3d8926759848ed9a3b.jpg: 416x416 2 aguas, Done. (0.207s)
-image 4/4 /content/canaa_dos_carajas/imagens/caixa-dagua--3-_jpg.rf.0d89f19be42dd7abcaa7a8687862cd03.jpg: 416x416 2 aguas, Done. (0.221s)
-Results saved to runs/detect/exp2
-Done. (0.912s)
+!./darknet detector test data/obj.data cfg/custom-yolov4-detector.cfg backup/yolov4.weights file.jpg  # image 
 ```
-<img src="https://user-images.githubusercontent.com/35050296/110505082-97085c00-80dc-11eb-8174-7b45270e4a28.png" width="480">
+```bash
+CUDA-version: 11000 (11020), cuDNN: 7.6.5, GPU count: 1  
+ OpenCV version: 3.2.0
+ compute_capability = 700, cudnn_half = 0 
+net.optimized_memory = 0 
+mini_batch = 1, batch = 24, time_steps = 1, train = 0 
+   layer   filters  size/strd(dil)      input                output
+   0 conv     32       3 x 3/ 1    416 x 416 x   3 ->  416 x 416 x  32 0.299 BF
+   1 conv     64       3 x 3/ 2    416 x 416 x  32 ->  208 x 208 x  64 1.595 BF
+   2 conv     64       1 x 1/ 1    208 x 208 x  64 ->  208 x 208 x  64 0.354 BF
+   3 route  1 		                           ->  208 x 208 x  64 
+                                   .
+                                   .
+                                   .
+ 152 conv    512       3 x 3/ 2     26 x  26 x 256 ->   13 x  13 x 512 0.399 BF
+ 153 route  152 116 	                           ->   13 x  13 x1024 
+ 154 conv    512       1 x 1/ 1     13 x  13 x1024 ->   13 x  13 x 512 0.177 BF
+ 155 conv   1024       3 x 3/ 1     13 x  13 x 512 ->   13 x  13 x1024 1.595 BF
+ 156 conv    512       1 x 1/ 1     13 x  13 x1024 ->   13 x  13 x 512 0.177 BF
+ 157 conv   1024       3 x 3/ 1     13 x  13 x 512 ->   13 x  13 x1024 1.595 BF
+ 158 conv    512       1 x 1/ 1     13 x  13 x1024 ->   13 x  13 x 512 0.177 BF
+ 159 conv   1024       3 x 3/ 1     13 x  13 x 512 ->   13 x  13 x1024 1.595 BF
+ 160 conv     24       1 x 1/ 1     13 x  13 x1024 ->   13 x  13 x  24 0.008 BF
+ 161 yolo
+[yolo] params: iou loss: ciou (4), iou_norm: 0.07, cls_norm: 1.00, scale_x_y: 1.05
+nms_kind: greedynms (1), beta = 0.600000 
+Total BFLOPS 59.578 
+avg_outputs = 490041 
+ Allocate additional workspace_size = 52.43 MB 
+Loading weights from backup/custom-yolov4-detector_final.weights...
+ seen 64, trained: 96 K-images (1 Kilo-batches_64) 
+Done! Loaded 162 layers from weights-file 
+test/1.jpg: Predicted in 11.755000 milli-seconds.
+lixo: 85%
+lixo: 78%
+lixo: 83%
+lixo: 73%
+agua: 90%
+Unable to init server: Could not connect: Connection refused
+
+(predictions:4089): Gtk-WARNING **: 23:24:49.356: open display: 
+```
+<img src="https://github.com/PedroFilhoEng/smart-city-canaa/blob/fbb601c689c8f44612cac49348d364e1d590b0fc/Tutorial/gifs/resultado_2.jpg" width="680">
 
 **Para executar inferência em vídeos em `/canaa_dos_carajas`:**
 ```bash
-$ !python detect.py --weights /content/canaa_dos_carajas/runs/train/yolov5s_results/weights/last.pt --conf 0.4 --source video.mp4
+%cd /canaa_dos_carajas
+!./darknet detector demo cfg/coco.data cfg/yolov4.cfg yolov4.weights -ext_output test.mp4
+```
+```bash
+cvWriteFrame 
+Objects:
 
-Saving TESTE.mp4 to TESTE.mp4
-User uploaded file "TESTE.mp4" with length 9710022 bytes
-     |████████████████████████████████| 645kB 4.3MB/s 
-Namespace(agnostic_nms=False, augment=False, classes=None, conf_thres=0.4, device='', exist_ok=False, img_size=640, iou_thres=0.45, name='exp', project='runs/detect', save_conf=False, save_txt=False, source='video.mp4', update=False, view_img=False, weights=['/content/canaa_dos_carajas/runs/train/yolov5s_results/weights/last.pt'])
-YOLOv5 🚀 d8c50c2 torch 1.8.0+cu101 CPU
+agua: 48% 
 
-Fusing layers... 
-Model Summary: 232 layers, 7249215 parameters, 0 gradients, 16.8 GFLOPS
-video 1/1 (1/1800) /content/canaa_dos_carajas/video.mp4: 384x640 1 lixo, Done. (0.377s)
-video 1/1 (2/1800) /content/canaa_dos_carajas/video.mp4: 384x640 1 lixo, Done. (0.281s)
-video 1/1 (3/1800) /content/canaa_dos_carajas/video.mp4: 384x640 Done. (0.280s)
-video 1/1 (4/1800) /content/canaa_dos_carajas/video.mp4: 384x640 Done. (0.276s)
-video 1/1 (5/1800) /content/canaa_dos_carajas/video.mp4: 384x640 Done. (0.280s)
-video 1/1 (6/1800) /content/canaa_dos_carajas/video.mp4: 384x640 Done. (0.278s)
-video 1/1 (7/1800) /content/canaa_dos_carajas/video.mp4: 384x640 Done. (0.282s)
-video 1/1 (8/1800) /content/canaa_dos_carajas/video.mp4: 384x640 Done. (0.272s)
-video 1/1 (9/1800) /content/canaa_dos_carajas/video.mp4: 384x640 Done. (0.276s)
-video 1/1 (10/1800) /content/canaa_dos_carajas/video.mp4: 384x640 Done. (0.282s)
-video 1/1 (11/1800) /content/canaa_dos_carajas/video.mp4: 384x640 Done. (0.284s)
-video 1/1 (12/1800) /content/canaa_dos_carajas/video.mp4: 384x640 Done. (0.282s)
-                                 .
-                                 .
-                                 .
-video 1/1 (1797/1800) /content/canaa_dos_carajas/video.mp4: 384x640 1 lixo, Done. (0.276s)
-video 1/1 (1798/1800) /content/canaa_dos_carajas/video.mp4: 384x640 1 lixo, Done. (0.280s)
-video 1/1 (1799/1800) /content/canaa_dos_carajas/video.mp4: 384x640 1 lixo, Done. (0.281s)
-video 1/1 (1800/1800) /content/canaa_dos_carajas/video.mp4: 384x640 Done. (0.278s)
-Results saved to runs/detect/exp
-Done. (535.095s)
+FPS:33.7 	 AVG_FPS:39.6
+
+ cvWriteFrame 
+Objects:
+
+agua: 54% 
+
+FPS:34.6 	 AVG_FPS:39.6
+                   .
+                   .
+                   .
+ cvWriteFrame 
+Objects:
+
+agua: 46% 
+
+FPS:35.0 	 AVG_FPS:39.6
+
+ cvWriteFrame 
+Stream closed.
+input video stream closed. 
+ closing... closed!output_video_writer closed. 
 ```
 
-![gif](https://github.com/PedroFilhoEng/smart-city-canaa/blob/dfe41ba4e5340ac5c8aee2cf3498160a99fdc407/Animated%20GIF-downsized_large.gif)
+![gif](https://media.giphy.com/media/XJknI7SqMKMY59JyB4/giphy.gif)
 
 
 # Treino
 
-Faça o download de [COCO](https://github.com/ultralytics/yolov5/blob/master/data/scripts/get_coco.sh) e execute o comando abaixo. Tempos de treinamento para YOLOv5s/m/l/x são em média 2/4/6/8 dias em um único V100 (multi-GPU times faster). Usar o maior `--batch-size` exige uma maior GPU, caso a GPU não tenha alta capacidade, optar por --batch-size 16.
-Este tutorial utiliza a arquitetura YOLOv5s.  
+Baixe pesos pré-treinados para as camadas convolucionais [yolov4.conv.137](https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v3_optimal/yolov4.conv.137) e execute o comando abaixo.
+```bash
+%cd /content/darknet
+!./darknet detector train data/obj.data cfg/custom-yolov4-detector.cfg yolov4.conv.137 -dont_show -map
+```
 
 ```bash
-$ python train.py --data coco.yaml --cfg yolov5s.yaml --weights '' --batch-size 64
-                                         yolov5m                                40
-                                         yolov5l                                24
-                                         yolov5x                                16
+                                     .
+                                     .
+                                     .
+(next mAP calculation at 4000 iterations) 
+ Last accuracy mAP@0.5 = 90.01 %, best = 90.37 % 
+ 3996: 1.369911, 1.617500 avg loss, 0.000010 rate, 8.128796 seconds, 191808 images, 0.161254 hours left
+Loaded: 0.000036 seconds
+
+ (next mAP calculation at 4000 iterations) 
+ Last accuracy mAP@0.5 = 90.01 %, best = 90.37 % 
+ 3997: 1.503854, 1.606135 avg loss, 0.000010 rate, 8.090233 seconds, 191856 images, 0.159732 hours left
+Loaded: 0.000039 seconds
+
+ (next mAP calculation at 4000 iterations) 
+ Last accuracy mAP@0.5 = 90.01 %, best = 90.37 % 
+ 3998: 1.252686, 1.570790 avg loss, 0.000010 rate, 8.194810 seconds, 191904 images, 0.158202 hours left
+Loaded: 0.000047 seconds
+
+ (next mAP calculation at 4000 iterations) 
+ Last accuracy mAP@0.5 = 90.01 %, best = 90.37 % 
+ 3999: 2.188731, 1.632584 avg loss, 0.000010 rate, 8.167288 seconds, 191952 images, 0.156666 hours left
+Loaded: 0.000034 seconds
+
+ (next mAP calculation at 4000 iterations) 
+ Last accuracy mAP@0.5 = 90.01 %, best = 90.37 % 
+ 4000: 1.721517, 1.641478 avg loss, 0.000010 rate, 8.081005 seconds, 192000 images, 0.155122 hours left
+Resizing to initial size: 416 x 416  try to allocate additional workspace_size = 52.43 MB 
+ CUDA allocate done! 
+
+ calculation mAP (mean average precision)...
+172
+ detections_count = 710, unique_truth_count = 297  
+class_id = 0, name = agua, ap = 84.52%   	 (TP = 183, FP = 38) 
+class_id = 1, name = lixo, ap = 95.31%   	 (TP = 65, FP = 9) 
+
+ for conf_thresh = 0.25, precision = 0.84, recall = 0.84, F1-score = 0.84 
+ for conf_thresh = 0.25, TP = 248, FP = 47, FN = 49, average IoU = 62.44 % 
+
+ IoU threshold = 50 %, used Area-Under-Curve for each unique Recall 
+ mean average precision (mAP@0.50) = 0.899153, or 89.92 % 
+Total Detection Time: 5 Seconds
+
+Set -points flag:
+ `-points 101` for MS COCO 
+ `-points 11` for PascalVOC 2007 (uncomment `difficult` in voc.data) 
+ `-points 0` (AUC) for ImageNet, PascalVOC 2010-2012, your custom dataset
+
+ mean_average_precision (mAP@0.5) = 0.899153 
+Saving weights to backup//custom-yolov4-detector_4000.weights
+Saving weights to backup//custom-yolov4-detector_last.weights
+Saving weights to backup//custom-yolov4-detector_final.weights
+
 ```
-Neste tutorial o comando para treino foi o seguinte:
-```bash
-$ !python train.py --data '../data.yaml' --cfg ./models/custom_yolov5s.yaml --weights ''--batch 16  --img 416  --epochs 4000  --name yolov5s_results  --cache
-```
-Argumentos:
-- **img:** define o tamanho da imagem de entrada
-- **batch:** determina o batch
-- **epochs:** define o número de épocas de treinamento. (Obs: é comum definir epochs = 2000*número_de_classes)
-- **data:** define o caminho para o arquivo yaml
-- **cfg:** especifica a configuração do modelo
-- **weights:** especifica um caminho personalizado para os pesos. (Obs.: você pode baixar os pesos da [Pasta](https://github.com/PedroFilhoEng/canaa_dos_carajas/blob/d8c50c2810130aa0722f92791fbbba46a16f0944/runs/train/yolov5s_results/weights))
-- **name:** nome dos resultados
-- **nosave:** salva apenas na última época
-- **cache:** armazenas as imagens em cache para agilizar o treino
+Clique [aqui](https://drive.google.com/file/d/1V-3kvohQIsB1uE5SdbSTvAgc6J7KZ_6r/view?usp=sharing) para baixar os pesos pré-treinados resultantes do treinamento com o [conjunto de dados (DATASET)](https://app.roboflow.com/ds/718N6C8kGj?key=6wbmJBk15G).
+
+# Resultados
+Utilizando o [conjunto de dados (DATASET)](https://app.roboflow.com/ds/718N6C8kGj?key=6wbmJBk15G), em 4000 épocas de treinamento a rede [YOLOV4](https://github.com/roboflow-ai/darknet.git) obteve a média de precisão de 89,9%.
+* mean_average_precision (mAP@0.5) = 0.899153;
+* Épocas de treinamento = 4000. 
 <img src="https://github.com/PedroFilhoEng/smart-city-canaa/blob/f9070052d45053c15af8b98c92c667cfb71eeef2/Tutorial/resultados_yolov4.png" width="600">
